@@ -7,6 +7,62 @@ import joblib
 import pandas as pd
 import streamlit as st
 
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Tarjetas de métricas con relieve, no planas */
+div[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #1a1f2b, #161b24);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+div[data-testid="stMetricValue"] {
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tabla con bordes suaves en vez de la grid plana por defecto */
+div[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Botones con más presencia */
+.stButton button, .stDownloadButton button {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    transition: transform 0.15s ease;
+}
+.stButton button:hover, .stDownloadButton button:hover {
+    transform: translateY(-1px);
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 # ----------------------------------------------------------------------------
 # Configuración general
 # ----------------------------------------------------------------------------
